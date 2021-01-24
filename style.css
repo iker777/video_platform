@@ -1,0 +1,140 @@
+:root{
+    --primary: #834dfc;
+}
+*{
+    background-color: var(--primary);
+    margin: 0px;
+    font-family: 'Mulish', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1% 2% 1% 2%;
+    padding: 0% 1% 0% 1%;
+    height: 100px;
+}
+.header__logo{
+    width: 50%;
+}
+.header__logo img{
+    display: block;
+    margin-right: auto;
+}
+.header__menu{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 3%;
+}
+.header__menu--not-dropdown{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header__menu--not-dropdown img{
+    width: 40px;
+    margin: 10px;        
+}
+.header__menu--not-dropdown span{
+    margin: 10px;
+    color: white;
+    font-weight: 900;
+}
+.header__menu--dropdown ul{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 600ms, visibility 600ms;
+}
+.header__menu:hover ul, .header__menu ul:hover{
+    display: block;
+    width: 50%;
+    visibility: visible;
+    opacity: 1;
+}
+.header__menu--dropdown a{
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-weight: 900;
+}
+.header__menu--dropdown a:hover{
+    text-decoration: underline;
+}
+.searchbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.searchbox__title{
+    color: white;
+    margin: 2%;
+}
+.searchbox__input{
+    border: 1px solid white ;
+    border-radius: 5rem;
+    width: 60%;
+    background-color: #ffffff46;
+    padding: 0.6rem;
+    
+}
+.searchbox ::placeholder{
+    color: white;
+}
+.searchbox__input:focus{
+    outline: 2px solid white;
+}
+.carousel{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 35px;
+    overflow-x: scroll;
+}
+.carousel__container{
+    white-space: nowrap;
+    
+}
+.carousel-item{
+    width: 200px;
+    height: 250px;
+    margin-right: 10px;
+    background-color: salmon;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 450ms all;
+    transform-origin: center left;
+    overflow:hidden;
+    position: relative;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+/*~ sirve para --> cuando se haga hover en el .carousel-item, los demás items hacen lo siguiente*/
+.carousel-item:hover ~ .carousel-item{
+    transform: translate(60px);
+}
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover {
+    transform: scale(1.3);
+    opacity: 1;
+}
