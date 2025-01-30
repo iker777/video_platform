@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/img/logo-iker.svg" type="image/x-icon">
 </head>
 <body class="login__body">
     <header class="header">
@@ -28,11 +29,11 @@
         </div>       
     </header>
     <section class="login">
-        <section class="login__container">
+        <div class="login__container">
             <h2>Inicia sesión</h2>
             <form action="" class="login__container--form">
-                <input type="text" name="email" placeholder="Correo" id="" class="input">
-                <input type="password" name="contraseña" placeholder="Contraseña" id="" class="input">
+                <input type="text" aria-label="correo" name="email" placeholder="Correo" class="input">
+                <input type="password" aria-label="contraseña" name="contraseña" placeholder="Contraseña" class="input">
                 <button class="button"><span>Inicar sesión</span></button>
                 <div class="login__container--remember-me">
                     <label for="">
@@ -41,12 +42,12 @@
                     <a href="/">Olvide mi contraseña</a>
                 </div>
             </form>
-            <section class="login__container--social-media">
+            <div class="login__container--social-media">
                 <div><img src="/img/google.svg" alt="">Inicia sesión con Google</div>
                 <div><img src="/img/twitter.svg" alt="">Inicia sesión con Twitter</div>
                 <p class="login__container--register">No tienes ninguna cuenta? <a href="#">Regístrate</a></p>
-            </section>
-        </section>
+            </div>
+        </div>
     </section>
     <footer class="footer">
         <a href="/">Términos de uso</a>
